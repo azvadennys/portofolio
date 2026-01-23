@@ -1,0 +1,39 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Trigger workflow saat push ke branch main
+
+permissions:
+  contents: write # Izin untuk menulis ke repository (untuk deploy)
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Ambil kodingan dari repo
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 2. Setup Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      # 3. Install Dependencies
+      - name: Install dependencies
+        run: npm ci
+
+      # 4. Build Project (Hasilnya akan ada di folder dist/)
+      - name: Build
+        run: npm run build
+
+      # 5. Deploy folder dist/ ke branch gh-pages
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist # Folder hasil build Vite
+          branch: gh-pages # Branch tujuan deploy (otomatis dibuat)
