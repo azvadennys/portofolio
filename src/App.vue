@@ -3,7 +3,7 @@ import { ref, onMounted, onUnmounted, computed } from 'vue';
 
 // --- DATA PRIBADI (DARI CV) ---
 const name = "Azvadennys Vasiguhamiaz, S.Kom.";
-const about = "Software Engineer dengan pengalaman end-to-end dalam membangun aplikasi Mobile (Flutter), Desktop (PySide6/Python), dan Web (Laravel, Vue.js). Berpengalaman merancang arsitektur sistem yang skalabel di atas ekosistem Cloud (Firebase, Google Cloud Platform), serta menulis kode yang bersih, modular, dan teruji. Memiliki keahlian khusus dalam mengintegrasikan AI/ML ke dalam produk perangkat lunak - mulai dari custom training TensorFlow hingga integrasi Generative AI (GPT/Gemini API) - untuk menghadirkan fitur cerdas yang berdampak nyata.";
+const about = "Software Engineer dengan pengalaman end-to-end dalam membangun aplikasi Mobile (Flutter), Desktop (PySide6/Python), dan Web (Laravel, Vue.js). Berpengalaman merancang arsitektur sistem yang skalabel di atas ekosistem Cloud (Firebase, Google Cloud Platform), serta menulis kode yang bersih, modular, dan teruji. Memiliki keahlian khusus dalam mengintegrasikan AI/ML ke dalam produk perangkat lunak - mulai dari custom training TensorFlow hingga integrasi Generative AI (GPT/Gemini API) untuk menghadirkan fitur cerdas yang berdampak nyata.";
 const email = "azvadenis@gmail.com";
 const phone = "+62 821 7583 1680";
 const location = "Kota Bengkulu, Indonesia";
@@ -254,7 +254,7 @@ const publications = [
     doi: "10.23887/janapati.v14i2.85544",
     url: "https://ejournal.undiksha.ac.id/index.php/janapati/article/view/85544",
     license: "CC BY-SA 4.0",
-    abstract: "Deep learning multi-class skin cancer classification on HAM10000 (10.015 dermoscopic images, 7 classes). Membandingkan tiga arsitektur transfer learning - DenseNet201, ResNet50, dan VGG16 - dengan Random Oversampling untuk menangani class imbalance. DenseNet201 mencapai akurasi 97% post-oversampling, mengungguli baseline 90-92% di literatur sebelumnya.",
+    abstract: "Deep learning multi-class skin cancer classification on HAM10000 (10.015 dermoscopic images, 7 classes). Membandingkan tiga arsitektur transfer learning DenseNet201, ResNet50, dan VGG16 dengan Random Oversampling untuk menangani class imbalance. DenseNet201 mencapai akurasi 97% post-oversampling, mengungguli baseline 90-92% di literatur sebelumnya.",
     keywords: ["Deep Learning", "DenseNet201", "Skin Cancer", "Transfer Learning", "HAM10000", "Imbalanced Data"],
   },
   {
@@ -993,7 +993,7 @@ const fallbackImg = (e) => { e.target.src = 'https://placehold.co/800x450/1e293b
           <span class="text-sky-400 font-mono text-sm tracking-widest uppercase">// Penelitian</span>
           <h2 class="text-3xl md:text-4xl font-bold text-white mt-2">Publikasi <span class="text-sky-500">Ilmiah</span></h2>
           <p class="text-slate-400 mt-3 max-w-2xl mx-auto text-sm">
-            Kontribusi pada jurnal nasional terindeks - fokus pada Deep Learning, Computer Vision, dan aplikasi AI untuk masalah lintas-disiplin.
+            Kontribusi pada jurnal nasional terindeks fokus pada Deep Learning, Computer Vision, dan aplikasi AI untuk masalah lintas disiplin.
           </p>
         </div>
 
@@ -1079,7 +1079,7 @@ const fallbackImg = (e) => { e.target.src = 'https://placehold.co/800x450/1e293b
           <span class="text-sky-400 font-mono text-sm tracking-widest uppercase">// Portofolio</span>
           <h2 class="text-3xl md:text-4xl font-bold text-white mt-2">Proyek <span class="text-sky-500">Unggulan</span></h2>
           <p class="text-slate-400 mt-3 max-w-2xl mx-auto text-sm">
-            {{ projectCountDisplay }} proyek terpilih dari berbagai industri  - pemerintahan, edukasi, pariwisata, dan olahraga.
+            {{ projectCountDisplay }} proyek terpilih dari berbagai industri pemerintahan, edukasi, pariwisata, dan olahraga.
           </p>
           <div class="flex flex-wrap items-center justify-center gap-3 mt-4 text-xs text-slate-500">
             <span v-if="lastUpdatedLabel" class="inline-flex items-center gap-1.5">
@@ -1191,7 +1191,7 @@ const fallbackImg = (e) => { e.target.src = 'https://placehold.co/800x450/1e293b
         </h3>
         <p class="text-slate-400 max-w-xl mx-auto mb-7 text-sm md:text-base leading-relaxed">
           Punya ide proyek AI/ML, aplikasi mobile, atau dashboard data?
-          Saya senang mendiskusikannya bersama - dari ideasi hingga implementasi end-to-end.
+          Saya senang mendiskusikannya bersama dari ideasi hingga implementasi end-to-end.
         </p>
         <div class="flex flex-wrap justify-center gap-3">
           <a :href="`https://wa.me/${waNumber}`" target="_blank" rel="noopener noreferrer"
