@@ -3,7 +3,7 @@ import { ref, onMounted, onUnmounted, computed } from 'vue';
 
 // --- DATA PRIBADI (DARI CV) ---
 const name = "Azvadennys Vasiguhamiaz, S.Kom.";
-const about = "Technical Project Manager yang berorientasi hasil dengan rekam jejak dalam menjembatani kebutuhan bisnis kompleks dengan eksekusi teknis. Ahli dalam SDLC, Strategi AI Hybrid, dan pengembangan lintas platform (Mobile, Desktop, Cloud).";
+const about = "Software Engineer dengan pengalaman end-to-end dalam membangun aplikasi Mobile (Flutter), Desktop (PySide6/Python), dan Web (Laravel, Vue.js). Berpengalaman merancang arsitektur sistem yang skalabel di atas ekosistem Cloud (Firebase, Google Cloud Platform), serta menulis kode yang bersih, modular, dan teruji. Memiliki keahlian khusus dalam mengintegrasikan AI/ML ke dalam produk perangkat lunak - mulai dari custom training TensorFlow hingga integrasi Generative AI (GPT/Gemini API) - untuk menghadirkan fitur cerdas yang berdampak nyata.";
 const email = "azvadenis@gmail.com";
 const phone = "+62 821 7583 1680";
 const location = "Kota Bengkulu, Indonesia";
@@ -18,11 +18,11 @@ const currentImageIndex = ref(0);
 
 // --- TYPING ANIMATION ---
 const rotatingRoles = [
-  "Technical Project Manager",
-  "Software Architect",
-  "Lead AI Engineer",
-  "Hybrid AI Specialist",
-  "Full-Stack Developer",
+  "Software Engineer",
+  "Integrasi AI/ML",
+  "Pengembangan Lintas-Platform",
+  "Spesialis Hybrid AI",
+  "Integrasi Generative AI",
 ];
 const typedRole = ref("");
 let typingTimer = null;
@@ -87,60 +87,220 @@ const scrollToSection = (id) => {
 const experiences = [
   {
     id: 1,
-    role: "Technical Project Manager & Lead AI Engineer",
-    company: "Perseverance Technology Co., Ltd (Remote, Taiwan)",
+    type: "Kerja",
+    role: "Software Engineer",
+    employment: "Kontrak",
+    company: "Perseverance Technology Co., Ltd.",
+    location: "New Taipei, Taiwan (Remote)",
     period: "Maret 2024 - Sekarang",
-    desc: "Bertanggung jawab penuh atas SDLC, menerjemahkan visi bisnis klien menjadi roadmap teknis, dan memimpin tim Agile. Merancang sistem Hybrid AI (TensorFlow + GenAI) dan ekosistem Desktop (PySide6) yang terintegrasi Cloud.",
-    tags: ["Project Management", "Hybrid AI", "PySide6", "Agile Leadership"]
+    summary: "Membangun produk perangkat lunak multi-platform end-to-end, dari perancangan arsitektur hingga implementasi kode, dengan fokus pada integrasi AI/ML untuk menghadirkan fitur cerdas yang berorientasi pada pengguna.",
+    highlights: [
+      { title: "Cross-Platform Mobile Development", desc: "Mengembangkan aplikasi Flutter (iOS & Android) dengan sinkronisasi real-time melalui Firebase (Firestore, Cloud Functions, Auth, Storage)." },
+      { title: "Enterprise Desktop Application",   desc: "Membangun aplikasi desktop skala enterprise menggunakan Python & PySide6 (Qt) dengan arsitektur MVC, multi-threading, dan concurrency untuk responsivitas UI." },
+      { title: "Hybrid AI Feature Engineering",    desc: "Mengimplementasikan sistem AI hybrid yang menggabungkan custom TensorFlow models (klasifikasi citra & intent recognition) dengan Generative AI API (GPT/Gemini)." },
+      { title: "System Integration",               desc: "Merancang ekosistem data terintegrasi antara aplikasi Desktop dan Mobile melalui layanan Cloud - konsistensi data dan alur kerja yang mulus." },
+      { title: "Engineering Practices",            desc: "Kode bersih, modular, terdokumentasi; version control Git/GitHub; kolaborasi tim Agile lintas fungsi." },
+    ],
+    tags: ["Flutter", "Python", "PySide6", "Firebase", "GCP", "Hybrid AI"],
   },
   {
     id: 2,
-    role: "Product Manager & Data Scientist (Capstone)",
-    company: "Bangkit Academy (Google, GoTo, Traveloka)",
-    period: "Feb 2023 - Des 2023",
-    desc: "Memimpin tim Top 68 Capstone Project membangun 'iFiCam'. Menentukan strategi produk (MVP), user journey, dan mengembangkan model CNN (DenseNet201) untuk klasifikasi kualitas ikan.",
-    tags: ["Product Management", "TensorFlow", "CNN", "Team Leadership"]
+    type: "Kerja",
+    role: "Asisten Laboratorium Komputer",
+    employment: "Paruh Waktu",
+    company: "Universitas Bengkulu",
+    location: "Bengkulu, Indonesia",
+    period: "Juli 2021 - Desember 2023",
+    summary: "Memfasilitasi praktikum mahasiswa dan mengajar materi pemrograman tingkat lanjut sebagai jembatan kurikulum kampus dengan kebutuhan industri.",
+    highlights: [
+      { title: "Pengajaran",  desc: "Mengajar materi pemrograman tingkat lanjut (Web, Mobile, Data Science) kepada ratusan mahasiswa per semester." },
+      { title: "Kolaborasi Akademik", desc: "Berkolaborasi dengan dosen menyusun modul ajar yang selaras dengan tren industri terkini." },
+      { title: "Operasional Lab",     desc: "Mengelola operasional teknis laboratorium komputer dan memfasilitasi seluruh kegiatan praktikum mahasiswa." },
+    ],
+    tags: ["Pengajaran", "Kurikulum", "Mentoring", "Operasional Lab"],
   },
   {
     id: 3,
-    role: "Asisten Laboratorium Komputer",
-    company: "Universitas Bengkulu",
-    period: "Juli 2021 - Des 2023",
-    desc: "Mengelola operasional teknis lab dan memfasilitasi praktikum ratusan mahasiswa. Mengajar materi pemrograman tingkat lanjut (Web, Mobile, Data) serta menyusun modul ajar.",
-    tags: ["Teaching", "Lab Operations", "Mentoring"]
+    type: "Kerja",
+    role: "Full Stack Web Developer",
+    employment: "Kontrak",
+    company: "Pemerintah Provinsi Bengkulu",
+    location: "Bengkulu, Indonesia",
+    period: "Mei 2022 - Desember 2022",
+    summary: "Mengembangkan platform digitalisasi kinerja antar-departemen untuk mendukung pengambilan keputusan berbasis data di lingkungan pemerintahan provinsi.",
+    highlights: [
+      { title: "Government Digitalization", desc: "Mengembangkan platform Analytics Dashboard berbasis Laravel 9 + MySQL untuk memvisualisasikan data kinerja antar departemen." },
+      { title: "End-to-End Deployment",     desc: "Menangani seluruh siklus deployment dari development di server lokal hingga production, dengan fokus pada keamanan data pemerintahan." },
+      { title: "Responsive UI/UX",          desc: "Memastikan aplikasi responsif di berbagai perangkat dan ramah digunakan oleh pengguna non-teknis di lingkungan pemerintahan." },
+    ],
+    tags: ["Laravel", "MySQL", "TI Pemerintahan", "Analitik"],
   },
   {
     id: 4,
-    role: "Full Stack Web Developer",
-    company: "Pemerintah Provinsi Bengkulu",
-    period: "Mei 2022 - Des 2022",
-    desc: "Mengembangkan Government Digitalization berupa Analytics Dashboard berbasis Laravel 9 & MySQL. Menangani end-to-end development dari server lokal hingga deployment produksi.",
-    tags: ["Laravel", "MySQL", "Government IT", "Analytics"]
-  }
+    type: "Program",
+    role: "Capstone Project Lead (Machine Learning Path)",
+    employment: "Beasiswa",
+    company: "Bangkit Academy 2023 - Google, GoTo, Traveloka",
+    location: "Jakarta, Indonesia (Remote)",
+    period: "Februari 2023 - Desember 2023",
+    summary: "Program pengembangan karier teknologi bergengsi dari Google, GoTo, dan Traveloka dengan tingkat penerimaan yang sangat kompetitif.",
+    highlights: [
+      { title: "Top 68 Capstone Project Nasional", desc: "Memimpin tim 6 orang (Mobile, Cloud, ML Engineers) membangun 'iFiCam' - aplikasi deteksi kualitas ikan berbasis AI." },
+      { title: "Technical Implementation",         desc: "Mengembangkan model CNN untuk klasifikasi citra dengan akurasi tinggi pada kondisi pencahayaan yang bervariasi." },
+      { title: "Product Development",              desc: "Menentukan fitur kunci MVP, menyusun user journey, dan mempresentasikan produk di depan panel ahli industri." },
+    ],
+    tags: ["Manajemen Produk", "TensorFlow", "CNN", "Kepemimpinan Tim"],
+  },
 ];
 
-// --- DATA SERTIFIKASI ---
+// --- DATA SERTIFIKASI (dideskripsikan ulang dari sumber resmi penerbit) ---
 const certifications = [
-  { name: "TensorFlow Developer Certification", issuer: "Google", level: "Expert", desc: "Standar global pengembang AI. Menguasai Neural Networks, CNN, dan NLP." },
-  { name: "DeepLearning.AI TensorFlow Professional", issuer: "Coursera", level: "Professional", desc: "Spesialisasi mendalam pada arsitektur Deep Learning modern." },
-  { name: "Google Data Analytics", issuer: "Google", level: "Professional", desc: "Analisis data komprehensif, pembersihan data, dan visualisasi." },
-  { name: "TensorFlow: Data and Deployment", issuer: "Coursera", level: "Specialization", desc: "Deployment model AI ke browser dan perangkat mobile (Edge AI)." },
-  { name: "Google IT Automation with Python", issuer: "Google", level: "Professional", desc: "Otomatisasi sistem operasi, Git/GitHub, dan manajemen konfigurasi." },
-  { name: "Mathematics for Machine Learning", issuer: "Imperial College London", level: "Specialization", desc: "Fondasi matematika (Aljabar Linear, Kalkulus) untuk ML." },
-  { name: "TOEFL ITP Level 1", issuer: "ETS · Colorado Course Bengkulu", level: "B1 / 473", desc: "Listening 48 · Structure 46 · Reading 48. Bronze achievement, test date 23 Apr 2026." }
+  // ===== AI & DATA SCIENCE =====
+  {
+    name: "TensorFlow Developer Certification",
+    issuer: "Google",
+    category: "AI & Data Science",
+    level: "Ahli",
+    desc: "Sertifikasi resmi Google yang memvalidasi kemampuan membangun dan melatih model deep learning menggunakan TensorFlow - mencakup Neural Networks, CNN untuk Computer Vision, NLP, dan Time Series. Berlaku 3 tahun.",
+  },
+  {
+    name: "DeepLearning.AI TensorFlow Developer Professional Certificate",
+    issuer: "Coursera · DeepLearning.AI",
+    category: "AI & Data Science",
+    level: "Profesional",
+    desc: "Seri 4 kursus oleh Andrew Ng: fondasi TensorFlow, CNN untuk Computer Vision, NLP dengan TensorFlow, serta Sequences/Time Series. Dirancang sebagai persiapan TF Developer Exam.",
+  },
+  {
+    name: "TensorFlow: Data and Deployment Specialization",
+    issuer: "Coursera · DeepLearning.AI",
+    category: "AI & Data Science",
+    level: "Spesialisasi",
+    desc: "Spesialisasi deployment model ML lintas-platform: TensorFlow.js (browser), TensorFlow Lite (mobile/IoT/edge), TensorFlow Data Services untuk pipeline data, serta skenario advanced deployment.",
+  },
+  {
+    name: "Mathematics for Machine Learning Specialization",
+    issuer: "Imperial College London · Coursera",
+    category: "AI & Data Science",
+    level: "Spesialisasi",
+    desc: "Tiga kursus matematika fundamental untuk ML dari Imperial College London: Linear Algebra, Multivariate Calculus, dan Principal Component Analysis (PCA).",
+  },
+  {
+    name: "Google Data Analytics Professional Certificate",
+    issuer: "Google",
+    category: "AI & Data Science",
+    level: "Profesional",
+    desc: "Program 8 kursus lengkap siklus data analytics: ask, prepare, process, analyze, share, act. Menguasai SQL, R, Tableau, pembersihan data, dan visualisasi untuk pengambilan keputusan berbasis data.",
+  },
+
+  // ===== SOFTWARE ENGINEERING & DEVOPS =====
+  {
+    name: "Google IT Automation with Python Professional Certificate",
+    issuer: "Google",
+    category: "Software Engineering & DevOps",
+    level: "Profesional",
+    desc: "Program 6 kursus: Python crash course, otomatisasi sistem operasi dengan Python, Git/GitHub, troubleshooting & debugging, configuration management & cloud automation. Fokus pada produktivitas DevOps.",
+  },
+  {
+    name: "Junior Web Developer",
+    issuer: "BNSP - Badan Nasional Sertifikasi Profesi · BPPTIK",
+    category: "Software Engineering & DevOps",
+    level: "Kompetensi Profesi",
+    desc: "Sertifikasi kompetensi profesi nasional dari BNSP (lembaga independen pelaksana sertifikasi profesi Indonesia) yang divalidasi melalui BPPTIK Kominfo. Mengakui kompetensi developer web entry-level sesuai SKKNI.",
+  },
+  {
+    name: "Digital Talent Scholarship: Junior Web Developer",
+    issuer: "Kominfo RI (Komdigi)",
+    category: "Software Engineering & DevOps",
+    level: "Beasiswa Nasional",
+    desc: "Program beasiswa pelatihan digital dari Kementerian Komunikasi dan Informatika RI. Track Junior Web Developer mencakup fondasi pengembangan web (HTML, CSS, JavaScript, framework) plus fasilitas penempatan kerja & soft skill workshop.",
+  },
+  {
+    name: "Dasar Pemrograman & Pengembangan Aplikasi Mobile",
+    issuer: "Dicoding Indonesia",
+    category: "Software Engineering & DevOps",
+    level: "Reviewer Expert",
+    desc: "Jalur belajar dari Dicoding (mitra Meta Tech Provider, Microsoft AI Cloud Partner, AWS Authorized Training Partner): fondasi algoritma & pemrograman, dilanjutkan pengembangan aplikasi mobile. Submission ditinjau expert reviewer dengan bantuan AI.",
+  },
+
+  // ===== LANGUAGE PROFICIENCY =====
+  {
+    name: "TOEFL ITP Level 1",
+    issuer: "ETS · Colorado Course Bengkulu",
+    category: "Language Proficiency",
+    level: "B1 / 473",
+    desc: "Listening 48 · Structure 46 · Reading 48 - semua section CEFR B1. Penghargaan Bronze, tanggal tes 23 Apr 2026, Student # 18025938.",
+  },
 ];
+
+// --- DATA PUBLIKASI ILMIAH ---
+const publications = [
+  {
+    id: 1,
+    title: "Comparative Study of Deep Learning Models to Classify Multi-Class Skin Cancer on Imbalanced Data",
+    authors: [
+      "Widhia KZ Oktoeberza",
+      "Muhammad Farchan Al Rahman",
+      "Azvadennys Vasiguhamiaz",
+      "Widya Nurul Huda",
+      "Afdhal Kurniawan Mainil",
+      "Julia Purnama Sari"
+    ],
+    journal: "JANAPATI - Jurnal Nasional Pendidikan Teknik Informatika",
+    publisher: "Universitas Pendidikan Ganesha",
+    volume: "14",
+    issue: "2",
+    pages: "421-431",
+    year: "2025",
+    doi: "10.23887/janapati.v14i2.85544",
+    url: "https://ejournal.undiksha.ac.id/index.php/janapati/article/view/85544",
+    license: "CC BY-SA 4.0",
+    abstract: "Deep learning multi-class skin cancer classification on HAM10000 (10.015 dermoscopic images, 7 classes). Membandingkan tiga arsitektur transfer learning - DenseNet201, ResNet50, dan VGG16 - dengan Random Oversampling untuk menangani class imbalance. DenseNet201 mencapai akurasi 97% post-oversampling, mengungguli baseline 90-92% di literatur sebelumnya.",
+    keywords: ["Deep Learning", "DenseNet201", "Skin Cancer", "Transfer Learning", "HAM10000", "Imbalanced Data"],
+  },
+  {
+    id: 2,
+    title: "Smart Packaging from Durian Seed Starch for Real-Time Quality Classification using DenseNet-121",
+    authors: [
+      "Putri Nutriastuti",
+      "Euis Nursaadah",
+      "Azvadennys Vasiguhamiaz",
+      "Aceng Ruyani",
+      "Nurhamidah",
+      "M. Lutfi Firdaus",
+    ],
+    journal: "ZERO - Jurnal Sains, Matematika dan Terapan",
+    publisher: "UIN Sumatera Utara",
+    volume: "10",
+    issue: "1",
+    pages: null,
+    year: "2026",
+    doi: "10.30829/zero.v10i1.28580",
+    url: "https://jurnal.uinsu.ac.id/index.php/zero/article/view/28580",
+    license: null,
+    abstract: "Pemanfaatan edible film dari pati biji durian dengan ekstrak bunga telang sebagai smart packaging untuk deteksi kesegaran makanan otomatis. Mengkombinasikan analisis kolorimetri dengan arsitektur DenseNet121 untuk klasifikasi kualitas berbasis deep learning.",
+    keywords: ["DenseNet121", "Edible Film", "Smart Packaging", "Food Safety", "Digital Image Analysis"],
+  },
+];
+
+const myAuthorName = "Azvadennys Vasiguhamiaz";
 
 // --- DATA PENDIDIKAN & BAHASA ---
 const education = {
   university: "Universitas Bengkulu",
   degree: "S1 Teknik Informatika",
+  location: "Bengkulu, Indonesia",
   gpa: "3.82 / 4.00",
   period: "Agustus 2020 - Mei 2024",
-  thesis: "Implementasi Transfer Learning DenseNet201 dalam Mengidentifikasi Genus Anggrek (High Accuracy)."
+  thesisTitle: "Implementasi Metode Transfer Learning DenseNet201 dalam Mengidentifikasi Genus Anggrek",
+  thesisDetail: {
+    problem:  "Mengatasi kesulitan identifikasi manual genus anggrek yang memiliki kemiripan visual tinggi (low inter-class variance).",
+    solution: "Mengimplementasikan arsitektur CNN DenseNet201 dengan strategi Transfer Learning (Fine-tuning) untuk mempercepat konvergensi model pada dataset spesifik.",
+    result:   "Berhasil membangun model klasifikasi otomatis dengan tingkat kepercayaan tinggi, siap diadaptasi untuk aplikasi konservasi digital.",
+  },
 };
 
 const languages = [
-  { lang: "Bahasa Indonesia", level: "Native / Ibu", percent: 100 },
+  { lang: "Bahasa Indonesia", level: "Asli (Bahasa Ibu)", percent: 100 },
   {
     lang: "Bahasa Inggris",
     level: "TOEFL ITP 473 · CEFR B1",
@@ -160,27 +320,63 @@ const languages = [
   },
 ];
 
-// --- TECH STACK (Simple Icons CDN  - auto brand color) ---
-const techStack = [
-  { name: "TensorFlow",  slug: "tensorflow" },
-  { name: "Python",      slug: "python" },
-  { name: "Flutter",     slug: "flutter" },
-  { name: "Laravel",     slug: "laravel" },
-  { name: "Vue.js",      slug: "vuedotjs" },
-  { name: "MySQL",       slug: "mysql" },
-  { name: "Firebase",    slug: "firebase" },
-  { name: "Google Cloud",slug: "googlecloud" },
-  { name: "Tailwind CSS",slug: "tailwindcss" },
-  { name: "Git",         slug: "git" },
-  { name: "PySide6",     slug: "qt" },
-  { name: "Android",     slug: "android" },
+// --- TECH STACK (kategorisasi mengikuti struktur CV) ---
+const techStackCategories = [
+  {
+    title: "Bahasa & Framework",
+    items: [
+      { name: "Flutter (Dart)", slug: "flutter" },
+      { name: "Laravel (PHP)",  slug: "laravel" },
+      { name: "Vue.js",         slug: "vuedotjs" },
+      { name: "JavaScript",     slug: "javascript" },
+      { name: "Python",         slug: "python" },
+      { name: "PySide6 (Qt)",   slug: "qt" },
+      { name: "MySQL",          slug: "mysql" },
+      { name: "REST API",       slug: null },
+      { name: "Firestore",      slug: "firebase" },
+    ],
+  },
+  {
+    title: "AI & Machine Learning",
+    items: [
+      { name: "TensorFlow",         slug: "tensorflow" },
+      { name: "Keras",              slug: "keras" },
+      { name: "TensorFlow Lite",    slug: "tensorflow" },
+      { name: "OpenAI (GPT)",       slug: "openai" },
+      { name: "Google Gemini",      slug: "googlegemini" },
+      { name: "Prompt Engineering", slug: null },
+      { name: "RAG",                slug: null },
+    ],
+  },
+  {
+    title: "Cloud, DevOps & Alat",
+    items: [
+      { name: "Firebase",     slug: "firebase" },
+      { name: "Google Cloud", slug: "googlecloud" },
+      { name: "Git",          slug: "git" },
+      { name: "GitHub",       slug: "github" },
+      { name: "CI/CD",        slug: null },
+      { name: "Agile/Scrum",  slug: null },
+    ],
+  },
+];
+
+// --- NAVIGASI FOOTER ---
+const footerNav = [
+  { id: 'hero',           label: 'Beranda' },
+  { id: 'resume',         label: 'Ringkasan' },
+  { id: 'experience',     label: 'Pengalaman' },
+  { id: 'certifications', label: 'Sertifikasi' },
+  { id: 'publications',   label: 'Publikasi' },
+  { id: 'projects',       label: 'Proyek' },
 ];
 
 // --- KONTAK CEPAT ---
+const waNumber = phone.replace(/[\s+]/g, ''); // 6282175831680
 const contactItems = [
-  { label: location, href: null,                icon: 'map' },
-  { label: email,    href: `mailto:${email}`,   icon: 'mail' },
-  { label: phone,    href: `tel:${phone.replace(/\s/g,'')}`, icon: 'phone' },
+  { label: location, href: null,                        icon: 'map',      external: false },
+  { label: email,    href: `mailto:${email}`,           icon: 'mail',     external: false },
+  { label: phone,    href: `https://wa.me/${waNumber}`, icon: 'whatsapp', external: true  },
 ];
 
 // --- LANGUAGE SWITCHER (powered by Google Translate hidden widget) ---
@@ -189,6 +385,7 @@ const supportedLangs = [
   { code: 'en',    flag: '🇺🇸', label: 'English'    },
   { code: 'ja',    flag: '🇯🇵', label: '日本語'      },
   { code: 'zh-CN', flag: '🇨🇳', label: '简体中文'    },
+  { code: 'zh-TW', flag: '🇹🇼', label: '繁體中文'    },
   { code: 'ko',    flag: '🇰🇷', label: '한국어'      },
   { code: 'ar',    flag: '🇸🇦', label: 'العربية'    },
   { code: 'es',    flag: '🇪🇸', label: 'Español'    },
@@ -231,7 +428,7 @@ function setLanguage(code) {
   }
   try { localStorage.setItem(LANG_STORAGE_KEY, code); } catch { /* noop */ }
   setTranslateCookie(code);
-  // Reload — GT widget akan baca cookie saat init dan auto-translate halaman segar
+  // Reload - GT widget akan baca cookie saat init dan auto-translate halaman segar
   window.location.reload();
 }
 
@@ -268,7 +465,7 @@ function transformProject(p) {
     industry: p.industry || null,
     client: p.client || null,
     year,
-    status: p.status === 'PUBLISHED' ? 'Live' : p.status,
+    status: p.status === 'PUBLISHED' ? 'Aktif' : p.status,
     featured: !!p.featured,
     liveUrl: p.projectUrl || null,
     videoUrl: null,
@@ -349,10 +546,10 @@ const projectCountDisplay = computed(() => {
 });
 
 const stats = computed(() => [
-  { label: "Years Exp.",     value: "4+",                       icon: 'briefcase' },
-  { label: "Projects",       value: projectCountDisplay.value,  icon: 'rocket' },
-  { label: "Certifications", value: "7",                        icon: 'badge' },
-  { label: "GPA",            value: "3.82",                     icon: 'star' },
+  { label: "Proyek",       value: projectCountDisplay.value,    icon: 'rocket' },
+  { label: "Sertifikasi",  value: String(certifications.length), icon: 'badge' },
+  { label: "Publikasi",    value: String(publications.length),  icon: 'book' },
+  { label: "IPK",          value: "3.82",                       icon: 'star' },
 ]);
 
 const lastUpdatedLabel = computed(() => {
@@ -374,11 +571,12 @@ const fallbackImg = (e) => { e.target.src = 'https://placehold.co/800x450/1e293b
       <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <div class="text-2xl font-extrabold tracking-tight bg-gradient-to-r from-sky-400 to-indigo-400 bg-clip-text text-transparent">AV.</div>
         <div class="hidden md:flex space-x-8">
-          <a @click.prevent="scrollToSection('hero')" class="nav-link">Home</a>
-          <a @click.prevent="scrollToSection('resume')" class="nav-link">Resume</a>
-          <a @click.prevent="scrollToSection('experience')" class="nav-link">Experience</a>
-          <a @click.prevent="scrollToSection('certifications')" class="nav-link">Certifications</a>
-          <a @click.prevent="scrollToSection('projects')" class="nav-link">Projects</a>
+          <a @click.prevent="scrollToSection('hero')" class="nav-link">Beranda</a>
+          <a @click.prevent="scrollToSection('resume')" class="nav-link">Ringkasan</a>
+          <a @click.prevent="scrollToSection('experience')" class="nav-link">Pengalaman</a>
+          <a @click.prevent="scrollToSection('certifications')" class="nav-link">Sertifikasi</a>
+          <a @click.prevent="scrollToSection('publications')" class="nav-link">Publikasi</a>
+          <a @click.prevent="scrollToSection('projects')" class="nav-link">Proyek</a>
         </div>
         <div class="flex items-center gap-3">
           <!-- Language switcher -->
@@ -408,7 +606,7 @@ const fallbackImg = (e) => { e.target.src = 'https://placehold.co/800x450/1e293b
 
           <a :href="linkedin" target="_blank"
             class="px-5 py-2 rounded-full border border-sky-500 text-sky-400 hover:bg-sky-500 hover:text-white transition-all font-semibold text-sm">
-            <span class="hidden sm:inline">Connect </span>LinkedIn
+            <span class="hidden sm:inline">Hubungi </span>LinkedIn
           </a>
         </div>
       </div>
@@ -438,11 +636,11 @@ const fallbackImg = (e) => { e.target.src = 'https://placehold.co/800x450/1e293b
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
             </span>
-            Open for Remote & Full-time
+            Terbuka untuk Remote & Penuh Waktu
           </div>
 
           <h1 class="text-4xl md:text-6xl font-bold mb-4 tracking-tight leading-[1.05]">
-            Hi, I'm <br />
+            Halo, saya <br />
             <span class="bg-gradient-to-r from-sky-400 via-indigo-400 to-fuchsia-400 bg-clip-text text-transparent">
               {{ name.split(',')[0] }}
             </span>
@@ -468,11 +666,15 @@ const fallbackImg = (e) => { e.target.src = 'https://placehold.co/800x450/1e293b
           <div class="flex flex-wrap gap-2 mb-7 justify-center md:justify-start">
             <component v-for="c in contactItems" :key="c.label"
               :is="c.href ? 'a' : 'div'" :href="c.href"
-              class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs text-slate-300 bg-slate-800/60 border border-slate-700/70 hover:border-sky-500/60 hover:text-sky-300 hover:bg-slate-800 transition-all">
+              :target="c.external ? '_blank' : null" :rel="c.external ? 'noopener noreferrer' : null"
+              class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs text-slate-300 bg-slate-800/60 border border-slate-700/70 transition-all"
+              :class="c.icon === 'whatsapp'
+                ? 'hover:border-emerald-500/60 hover:text-emerald-300 hover:bg-emerald-500/5'
+                : 'hover:border-sky-500/60 hover:text-sky-300 hover:bg-slate-800'">
               <!-- icons -->
               <svg v-if="c.icon === 'map'"   xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
               <svg v-else-if="c.icon === 'mail'" xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l9 6 9-6M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-              <svg v-else-if="c.icon === 'phone'" xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h2.28a2 2 0 011.94 1.515l.7 2.8a2 2 0 01-.45 1.95L8.09 10.91a11 11 0 005 5l1.645-1.378a2 2 0 011.95-.45l2.8.7A2 2 0 0121 16.72V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              <svg v-else-if="c.icon === 'whatsapp'" xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l.6.953-1.05 3.832 3.929-1.034zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.149-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
               <span>{{ c.label }}</span>
             </component>
           </div>
@@ -497,6 +699,7 @@ const fallbackImg = (e) => { e.target.src = 'https://placehold.co/800x450/1e293b
                 <svg v-if="s.icon === 'briefcase'" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 7h18M5 7v12a2 2 0 002 2h10a2 2 0 002-2V7M9 7V5a2 2 0 012-2h2a2 2 0 012 2v2"/></svg>
                 <svg v-else-if="s.icon === 'rocket'" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7M4 21l5-5"/></svg>
                 <svg v-else-if="s.icon === 'badge'" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                <svg v-else-if="s.icon === 'book'" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
                 <svg v-else-if="s.icon === 'star'" class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.181-.557l-4.204-3.602a.562.562 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"/></svg>
                 <span class="text-[11px] uppercase tracking-wider text-slate-500 group-hover:text-sky-400 transition-colors">{{ s.label }}</span>
               </div>
@@ -539,7 +742,7 @@ const fallbackImg = (e) => { e.target.src = 'https://placehold.co/800x450/1e293b
 
       <!-- Scroll indicator -->
       <div class="absolute bottom-6 left-1/2 -translate-x-1/2 text-slate-600 text-xs flex flex-col items-center gap-1 animate-float-slow">
-        <span class="font-mono tracking-widest">SCROLL</span>
+        <span class="font-mono tracking-widest">GULIR</span>
         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
       </div>
     </header>
@@ -550,7 +753,7 @@ const fallbackImg = (e) => { e.target.src = 'https://placehold.co/800x450/1e293b
       <div class="max-w-7xl mx-auto px-6 relative">
 
         <div class="text-center mb-14">
-          <span class="text-sky-400 font-mono text-sm tracking-widest uppercase">// About</span>
+          <span class="text-sky-400 font-mono text-sm tracking-widest uppercase">// Tentang</span>
           <h2 class="text-3xl md:text-4xl font-bold text-white mt-2">Pendidikan & <span class="text-sky-500">Keahlian</span></h2>
         </div>
 
@@ -564,10 +767,11 @@ const fallbackImg = (e) => { e.target.src = 'https://placehold.co/800x450/1e293b
                 <div class="flex-shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br from-sky-500 to-indigo-600 flex items-center justify-center text-2xl shadow-lg shadow-sky-500/30">
                   🎓
                 </div>
-                <div>
-                  <span class="text-xs font-mono text-sky-400 uppercase tracking-wider">Education</span>
+                <div class="flex-1 min-w-0">
+                  <span class="text-xs font-mono text-sky-400 uppercase tracking-wider">Pendidikan</span>
                   <h3 class="text-xl font-bold text-white mt-0.5">{{ education.university }}</h3>
                   <p class="text-sky-400 font-medium text-sm">{{ education.degree }}</p>
+                  <p v-if="education.location" class="text-xs text-slate-500 italic">{{ education.location }}</p>
                 </div>
               </div>
 
@@ -577,7 +781,7 @@ const fallbackImg = (e) => { e.target.src = 'https://placehold.co/800x450/1e293b
                   <div class="absolute -left-[29px] top-1.5 w-3 h-3 rounded-full bg-sky-500 ring-4 ring-sky-500/20"></div>
                   <div class="flex items-center justify-between">
                     <span class="text-slate-400 text-sm font-mono">{{ education.period }}</span>
-                    <span class="text-xs font-bold text-emerald-300 bg-emerald-500/10 border border-emerald-500/30 px-2 py-0.5 rounded">GRADUATED</span>
+                    <span class="text-xs font-bold text-emerald-300 bg-emerald-500/10 border border-emerald-500/30 px-2 py-0.5 rounded">LULUS</span>
                   </div>
                 </div>
                 <div class="relative">
@@ -589,12 +793,26 @@ const fallbackImg = (e) => { e.target.src = 'https://placehold.co/800x450/1e293b
                 </div>
               </div>
 
-              <!-- Thesis pull-quote -->
+              <!-- Thesis card -->
               <div class="relative p-4 rounded-xl bg-slate-950/50 border border-slate-700/50">
-                <span class="absolute -top-3 left-3 px-2 text-xs font-bold text-sky-400 bg-slate-900">THESIS</span>
-                <p class="text-slate-300 text-sm italic leading-relaxed">
-                  "{{ education.thesis }}"
+                <span class="absolute -top-3 left-3 px-2 text-xs font-bold text-sky-400 bg-slate-900">SKRIPSI</span>
+                <p class="text-slate-200 text-sm font-medium leading-relaxed mb-3">
+                  "{{ education.thesisTitle }}"
                 </p>
+                <div class="space-y-2 pt-3 border-t border-slate-800">
+                  <div class="flex items-start gap-2 text-xs">
+                    <span class="font-bold text-rose-300 mt-0.5 flex-shrink-0 w-16">Masalah:</span>
+                    <span class="text-slate-400">{{ education.thesisDetail.problem }}</span>
+                  </div>
+                  <div class="flex items-start gap-2 text-xs">
+                    <span class="font-bold text-sky-300 mt-0.5 flex-shrink-0 w-16">Solusi:</span>
+                    <span class="text-slate-400">{{ education.thesisDetail.solution }}</span>
+                  </div>
+                  <div class="flex items-start gap-2 text-xs">
+                    <span class="font-bold text-emerald-300 mt-0.5 flex-shrink-0 w-16">Hasil:</span>
+                    <span class="text-slate-400">{{ education.thesisDetail.result }}</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -609,7 +827,7 @@ const fallbackImg = (e) => { e.target.src = 'https://placehold.co/800x450/1e293b
                   🌐
                 </div>
                 <div>
-                  <span class="text-xs font-mono text-sky-400 uppercase tracking-wider">Languages</span>
+                  <span class="text-xs font-mono text-sky-400 uppercase tracking-wider">Bahasa</span>
                   <h3 class="text-xl font-bold text-white mt-0.5">Komunikasi</h3>
                 </div>
               </div>
@@ -632,7 +850,7 @@ const fallbackImg = (e) => { e.target.src = 'https://placehold.co/800x450/1e293b
                         <span class="text-[11px] font-mono text-slate-400">{{ lang.details.date }}</span>
                       </div>
                       <div class="text-right">
-                        <div class="text-[10px] uppercase tracking-widest text-slate-500">Total</div>
+                        <div class="text-[10px] uppercase tracking-widest text-slate-500">Total Skor</div>
                         <div class="font-extrabold text-lg bg-gradient-to-r from-sky-300 to-indigo-300 bg-clip-text text-transparent leading-none">
                           {{ lang.details.total }}
                           <span class="text-[10px] text-slate-500 font-mono align-top">/677</span>
@@ -648,7 +866,7 @@ const fallbackImg = (e) => { e.target.src = 'https://placehold.co/800x450/1e293b
                       </div>
                     </div>
                     <div class="mt-2.5 text-[10px] text-slate-500 italic text-right">
-                      Issued by ETS · {{ lang.details.institution }}
+                      Diterbitkan oleh ETS · {{ lang.details.institution }}
                     </div>
                   </div>
                 </div>
@@ -662,18 +880,23 @@ const fallbackImg = (e) => { e.target.src = 'https://placehold.co/800x450/1e293b
                   ⚡
                 </div>
                 <div>
-                  <span class="text-xs font-mono text-sky-400 uppercase tracking-wider">Tech Stack</span>
-                  <h3 class="text-xl font-bold text-white mt-0.5">Tools & Frameworks</h3>
+                  <span class="text-xs font-mono text-sky-400 uppercase tracking-wider">Teknologi</span>
+                  <h3 class="text-xl font-bold text-white mt-0.5">Alat & Framework</h3>
                 </div>
               </div>
-              <div class="flex flex-wrap gap-2">
-                <div v-for="t in techStack" :key="t.name"
-                  class="group inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-950/60 border border-slate-700 hover:border-sky-500/60 hover:bg-slate-950 transition-all cursor-default">
-                  <img :src="`https://cdn.simpleicons.org/${t.slug}`"
-                       :alt="t.name"
-                       class="w-4 h-4 group-hover:scale-110 transition-transform"
-                       onerror="this.style.display='none'"/>
-                  <span class="text-xs font-medium text-slate-300 group-hover:text-white">{{ t.name }}</span>
+              <div class="space-y-4">
+                <div v-for="cat in techStackCategories" :key="cat.title">
+                  <h4 class="text-[11px] font-mono text-sky-400 uppercase tracking-wider mb-2">{{ cat.title }}</h4>
+                  <div class="flex flex-wrap gap-1.5">
+                    <div v-for="t in cat.items" :key="t.name"
+                      class="group inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-slate-950/60 border border-slate-700 hover:border-sky-500/60 hover:bg-slate-950 transition-all cursor-default">
+                      <img v-if="t.slug" :src="`https://cdn.simpleicons.org/${t.slug}`"
+                           :alt="t.name"
+                           class="w-3.5 h-3.5 group-hover:scale-110 transition-transform"
+                           onerror="this.style.display='none'"/>
+                      <span class="text-[11px] font-medium text-slate-300 group-hover:text-white">{{ t.name }}</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -688,27 +911,46 @@ const fallbackImg = (e) => { e.target.src = 'https://placehold.co/800x450/1e293b
     <section id="experience" class="py-24 bg-slate-950 relative">
       <div class="max-w-4xl mx-auto px-6">
         <div class="text-center mb-14">
-          <span class="text-sky-400 font-mono text-sm tracking-widest uppercase">// Career</span>
+          <span class="text-sky-400 font-mono text-sm tracking-widest uppercase">// Karier</span>
           <h2 class="text-3xl md:text-4xl font-bold text-white mt-2">Pengalaman <span class="text-sky-500">Profesional</span></h2>
         </div>
 
-        <div class="relative border-l-2 border-slate-800 ml-4 md:ml-0 space-y-12">
+        <div class="relative border-l-2 border-slate-800 ml-4 md:ml-0 space-y-14">
           <div v-for="exp in experiences" :key="exp.id" class="relative pl-8 md:pl-12 group">
-            <div class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-slate-900 border-2 border-sky-500 group-hover:bg-sky-500 group-hover:scale-125 transition-all"></div>
+            <div class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-slate-900 border-2 group-hover:scale-125 transition-all"
+                 :class="exp.type === 'Program' ? 'border-fuchsia-500 group-hover:bg-fuchsia-500' : 'border-sky-500 group-hover:bg-sky-500'"></div>
 
-            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
-              <h3 class="text-xl font-bold text-white group-hover:text-sky-400 transition-colors">
-                {{ exp.role }}
-              </h3>
-              <span class="text-sm text-slate-500 font-mono">{{ exp.period }}</span>
+            <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-3 mb-1.5">
+              <div class="flex-1">
+                <div class="flex flex-wrap items-center gap-2 mb-1">
+                  <h3 class="text-xl font-bold text-white group-hover:text-sky-400 transition-colors">{{ exp.role }}</h3>
+                  <span class="text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider"
+                        :class="exp.type === 'Program'
+                          ? 'text-fuchsia-300 bg-fuchsia-500/10 border border-fuchsia-500/30'
+                          : 'text-sky-300 bg-sky-500/10 border border-sky-500/30'">
+                    {{ exp.employment }}
+                  </span>
+                </div>
+                <h4 class="text-base text-sky-500">{{ exp.company }}</h4>
+              </div>
+              <div class="text-left sm:text-right text-xs text-slate-500 font-mono flex-shrink-0">
+                <div>{{ exp.period }}</div>
+                <div v-if="exp.location" class="mt-0.5 text-slate-600 italic">{{ exp.location }}</div>
+              </div>
             </div>
 
-            <h4 class="text-lg text-sky-500 mb-3">{{ exp.company }}</h4>
-            <p class="text-slate-400 mb-4 leading-relaxed text-sm md:text-base">{{ exp.desc }}</p>
+            <p class="text-slate-400 mb-4 leading-relaxed text-sm">{{ exp.summary }}</p>
 
-            <div class="flex flex-wrap gap-2">
+            <ul v-if="exp.highlights?.length" class="space-y-2 mb-5">
+              <li v-for="(h, i) in exp.highlights" :key="i" class="text-sm text-slate-300 flex items-start gap-2">
+                <span class="text-sky-400 mt-1.5 w-1 h-1 rounded-full bg-sky-400 flex-shrink-0"></span>
+                <span><strong class="text-white">{{ h.title }}:</strong> <span class="text-slate-400">{{ h.desc }}</span></span>
+              </li>
+            </ul>
+
+            <div class="flex flex-wrap gap-1.5">
               <span v-for="tag in exp.tags" :key="tag"
-                class="px-2 py-1 text-xs rounded bg-slate-800 text-slate-300 border border-slate-700">
+                class="px-2 py-0.5 text-[11px] rounded bg-slate-800 text-slate-300 border border-slate-700">
                 #{{ tag }}
               </span>
             </div>
@@ -721,21 +963,111 @@ const fallbackImg = (e) => { e.target.src = 'https://placehold.co/800x450/1e293b
     <section id="certifications" class="py-24 bg-slate-900">
       <div class="max-w-7xl mx-auto px-6">
         <div class="text-center mb-14">
-          <span class="text-sky-400 font-mono text-sm tracking-widest uppercase">// Credentials</span>
+          <span class="text-sky-400 font-mono text-sm tracking-widest uppercase">// Kredensial</span>
           <h2 class="text-3xl md:text-4xl font-bold text-white mt-2">Sertifikasi & <span class="text-sky-500">Lisensi</span></h2>
         </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           <div v-for="(cert, index) in certifications" :key="index"
-            class="bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-sky-500 hover:shadow-lg hover:shadow-sky-500/10 hover:-translate-y-1 transition-all group">
-            <div class="flex items-start justify-between mb-4">
-              <div class="w-10 h-10 rounded-lg bg-sky-500/10 flex items-center justify-center text-xl">📜</div>
-              <span class="text-xs font-bold text-sky-400 bg-sky-500/10 px-2 py-1 rounded">{{ cert.level }}</span>
+            class="bg-slate-800 p-5 rounded-xl border border-slate-700 hover:border-sky-500 hover:shadow-lg hover:shadow-sky-500/10 hover:-translate-y-1 transition-all group flex flex-col">
+            <div class="flex items-start justify-between mb-3 gap-2">
+              <div class="w-10 h-10 rounded-lg bg-sky-500/10 flex items-center justify-center text-xl flex-shrink-0">📜</div>
+              <span class="text-[10px] font-bold text-sky-400 bg-sky-500/10 border border-sky-500/20 px-2 py-1 rounded text-right">{{ cert.level }}</span>
             </div>
-            <h3 class="text-lg font-bold text-white mb-1 group-hover:text-sky-400 transition-colors">{{ cert.name }}</h3>
-            <p class="text-sm text-sky-200 mb-3">{{ cert.issuer }}</p>
-            <p class="text-sm text-slate-400 line-clamp-2">{{ cert.desc }}</p>
+            <span v-if="cert.category" class="text-[10px] font-mono text-fuchsia-300 uppercase tracking-wider mb-1">{{ cert.category }}</span>
+            <h3 class="text-base font-bold text-white mb-1 leading-snug group-hover:text-sky-400 transition-colors">{{ cert.name }}</h3>
+            <p class="text-xs text-sky-200 mb-3 italic">{{ cert.issuer }}</p>
+            <p class="text-xs text-slate-400 leading-relaxed flex-grow">{{ cert.desc }}</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PUBLICATIONS ============ -->
+    <section id="publications" class="py-24 bg-slate-950 border-y border-slate-900 relative overflow-hidden">
+      <div class="absolute top-1/4 left-0 w-96 h-96 bg-indigo-500/5 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 right-0 w-96 h-96 bg-sky-500/5 rounded-full blur-3xl"></div>
+
+      <div class="max-w-6xl mx-auto px-6 relative">
+        <div class="text-center mb-14">
+          <span class="text-sky-400 font-mono text-sm tracking-widest uppercase">// Penelitian</span>
+          <h2 class="text-3xl md:text-4xl font-bold text-white mt-2">Publikasi <span class="text-sky-500">Ilmiah</span></h2>
+          <p class="text-slate-400 mt-3 max-w-2xl mx-auto text-sm">
+            Kontribusi pada jurnal nasional terindeks - fokus pada Deep Learning, Computer Vision, dan aplikasi AI untuk masalah lintas-disiplin.
+          </p>
+        </div>
+
+        <div class="space-y-6">
+          <article v-for="pub in publications" :key="pub.id"
+            class="group relative bg-gradient-to-br from-slate-900/80 to-slate-900/40 rounded-2xl border border-slate-800 hover:border-sky-500/50 transition-all overflow-hidden backdrop-blur">
+
+            <!-- Accent strip kiri -->
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-sky-500 via-indigo-500 to-fuchsia-500 opacity-60 group-hover:opacity-100 transition-opacity"></div>
+
+            <div class="p-6 md:p-8 pl-8 md:pl-10">
+              <!-- Meta row -->
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md bg-sky-500/10 border border-sky-500/30 text-sky-300 text-[11px] font-bold uppercase tracking-wider">
+                  📄 Artikel Jurnal
+                </span>
+                <span class="text-xs text-slate-500 font-mono">{{ pub.year }}</span>
+                <span class="text-xs text-slate-600">·</span>
+                <span class="text-xs text-slate-400">Vol. {{ pub.volume }}, No. {{ pub.issue }}<span v-if="pub.pages"> · pp. {{ pub.pages }}</span></span>
+                <span v-if="pub.license" class="ml-auto text-[10px] font-mono text-emerald-300 bg-emerald-500/10 border border-emerald-500/30 px-2 py-0.5 rounded">
+                  {{ pub.license }}
+                </span>
+              </div>
+
+              <!-- Title -->
+              <h3 class="text-lg md:text-xl font-bold text-white mb-2 leading-snug group-hover:text-sky-300 transition-colors">
+                {{ pub.title }}
+              </h3>
+
+              <!-- Journal -->
+              <p class="text-sm text-sky-400 mb-3 italic">
+                {{ pub.journal }} <span class="text-slate-500">- {{ pub.publisher }}</span>
+              </p>
+
+              <!-- Authors with my name highlighted -->
+              <div class="flex flex-wrap items-center gap-x-1.5 gap-y-1 mb-4 text-xs">
+                <template v-for="(author, i) in pub.authors" :key="author">
+                  <span :class="author === myAuthorName
+                    ? 'text-sky-300 font-bold bg-sky-500/10 border border-sky-500/30 px-2 py-0.5 rounded'
+                    : 'text-slate-400'">
+                    {{ author }}
+                  </span>
+                  <span v-if="i < pub.authors.length - 1" class="text-slate-600">·</span>
+                </template>
+              </div>
+
+              <!-- Abstract -->
+              <p class="text-sm text-slate-300 leading-relaxed mb-4">
+                {{ pub.abstract }}
+              </p>
+
+              <!-- Keywords -->
+              <div class="flex flex-wrap gap-1.5 mb-5">
+                <span v-for="kw in pub.keywords" :key="kw"
+                  class="text-[11px] text-slate-300 bg-slate-800/60 border border-slate-700 px-2 py-0.5 rounded">
+                  {{ kw }}
+                </span>
+              </div>
+
+              <!-- Footer actions -->
+              <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-slate-800">
+                <a :href="pub.url" target="_blank" rel="noopener"
+                  class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-gradient-to-r from-sky-600 to-indigo-600 hover:from-sky-500 hover:to-indigo-500 text-white text-xs font-bold transition-all shadow-lg shadow-sky-500/20">
+                  <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                  Baca Artikel
+                </a>
+                <a v-if="pub.doi" :href="`https://doi.org/${pub.doi}`" target="_blank" rel="noopener"
+                  class="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-slate-800/60 hover:bg-slate-800 border border-slate-700 hover:border-sky-500/60 text-slate-300 hover:text-sky-300 text-xs font-medium transition-all">
+                  <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                  DOI: <span class="font-mono">{{ pub.doi }}</span>
+                </a>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -744,8 +1076,8 @@ const fallbackImg = (e) => { e.target.src = 'https://placehold.co/800x450/1e293b
     <section id="projects" class="py-24 bg-slate-950">
       <div class="max-w-7xl mx-auto px-6">
         <div class="text-center mb-14">
-          <span class="text-sky-400 font-mono text-sm tracking-widest uppercase">// Portfolio</span>
-          <h2 class="text-3xl md:text-4xl font-bold text-white mt-2">Featured <span class="text-sky-500">Projects</span></h2>
+          <span class="text-sky-400 font-mono text-sm tracking-widest uppercase">// Portofolio</span>
+          <h2 class="text-3xl md:text-4xl font-bold text-white mt-2">Proyek <span class="text-sky-500">Unggulan</span></h2>
           <p class="text-slate-400 mt-3 max-w-2xl mx-auto text-sm">
             {{ projectCountDisplay }} proyek terpilih dari berbagai industri  - pemerintahan, edukasi, pariwisata, dan olahraga.
           </p>
@@ -806,7 +1138,7 @@ const fallbackImg = (e) => { e.target.src = 'https://placehold.co/800x450/1e293b
           <div v-for="project in projects" :key="project.id" @click="openProject(project)"
             class="group bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 hover:border-sky-500/50 hover:-translate-y-2 hover:shadow-xl hover:shadow-sky-500/10 transition-all cursor-pointer flex flex-col relative">
             <div v-if="project.featured" class="absolute top-3 left-3 z-10 inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-amber-500/90 text-amber-950 text-[10px] font-bold uppercase tracking-wider shadow-lg">
-              ★ Featured
+              ★ Unggulan
             </div>
             <div class="h-48 overflow-hidden relative bg-slate-800">
               <img :src="project.images[0]" @error="fallbackImg"
@@ -837,18 +1169,143 @@ const fallbackImg = (e) => { e.target.src = 'https://placehold.co/800x450/1e293b
     </section>
 
     <!-- ============ FOOTER ============ -->
-    <footer class="py-12 border-t border-slate-800 bg-slate-900 text-center">
-      <div class="max-w-7xl mx-auto px-6">
-        <h3 class="text-2xl font-bold text-white mb-3">Let's Collaborate</h3>
-        <p class="text-slate-400 mb-6 max-w-xl mx-auto">
-          Tertarik mendiskusikan proyek AI atau pengembangan software?
-        </p>
-        <div class="flex justify-center gap-6 mb-8">
-          <a :href="'mailto:' + email" class="text-slate-300 hover:text-sky-400 transition-colors">Email</a>
-          <a :href="linkedin" class="text-slate-300 hover:text-sky-400 transition-colors">LinkedIn</a>
-          <a :href="github" class="text-slate-300 hover:text-sky-400 transition-colors">GitHub</a>
+    <footer class="relative border-t border-slate-800 bg-slate-900 overflow-hidden">
+      <!-- Background aurora & grid -->
+      <div class="absolute inset-0 opacity-30"
+           style="background-image: linear-gradient(rgba(56,189,248,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(56,189,248,0.06) 1px, transparent 1px); background-size: 60px 60px;"></div>
+      <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[40rem] h-[40rem] bg-sky-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+      <div class="absolute -bottom-32 -right-20 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-32 -left-20 w-96 h-96 bg-fuchsia-500/5 rounded-full blur-3xl pointer-events-none"></div>
+
+      <!-- ===== CTA BANNER ===== -->
+      <div class="relative max-w-5xl mx-auto px-6 pt-16 md:pt-20 pb-10 text-center">
+        <div class="inline-flex items-center gap-2 mb-5 px-3.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-semibold">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+          </span>
+          Tersedia untuk proyek baru
         </div>
-        <p class="text-slate-600 text-sm">© 2026 {{ name }}. Built with Vue.js & Tailwind.</p>
+        <h3 class="text-3xl md:text-5xl font-extrabold text-white mb-4 tracking-tight">
+          Mari <span class="bg-gradient-to-r from-sky-400 via-indigo-400 to-fuchsia-400 bg-clip-text text-transparent">Berkolaborasi</span>
+        </h3>
+        <p class="text-slate-400 max-w-xl mx-auto mb-7 text-sm md:text-base leading-relaxed">
+          Punya ide proyek AI/ML, aplikasi mobile, atau dashboard data?
+          Saya senang mendiskusikannya bersama — dari ideasi hingga implementasi end-to-end.
+        </p>
+        <div class="flex flex-wrap justify-center gap-3">
+          <a :href="`https://wa.me/${waNumber}`" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-white text-sm font-bold shadow-lg shadow-emerald-500/30 hover:shadow-emerald-500/50 hover:-translate-y-0.5 transition-all">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l.6.953-1.05 3.832 3.929-1.034zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.149-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            Chat WhatsApp
+          </a>
+          <a :href="'mailto:' + email"
+             class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-sky-600 to-indigo-600 hover:from-sky-500 hover:to-indigo-500 text-white text-sm font-bold shadow-lg shadow-sky-500/30 hover:shadow-sky-500/50 hover:-translate-y-0.5 transition-all">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l9 6 9-6M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            Kirim Email
+          </a>
+          <a :href="linkedin" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-slate-800/60 hover:bg-slate-800 text-white text-sm font-bold border border-slate-700 hover:border-sky-500/60 transition-all">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+
+      <!-- ===== 4-COLUMN GRID ===== -->
+      <div class="relative max-w-7xl mx-auto px-6">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 py-12 border-t border-slate-800/80">
+
+          <!-- Brand -->
+          <div class="lg:col-span-1">
+            <div class="text-3xl font-extrabold tracking-tight bg-gradient-to-r from-sky-400 via-indigo-400 to-fuchsia-400 bg-clip-text text-transparent mb-3">AV.</div>
+            <p class="text-sm text-slate-300 font-semibold mb-1">{{ name }}</p>
+            <p class="text-xs text-slate-500 mb-4">Software Engineer · AI/ML Integration · Cross-Platform Development</p>
+            <p class="text-xs text-slate-500 flex items-center gap-1.5">
+              <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              {{ location }}
+            </p>
+          </div>
+
+          <!-- Navigasi -->
+          <div>
+            <h4 class="text-[11px] font-bold uppercase tracking-widest text-sky-400 mb-4 font-mono">// Navigasi</h4>
+            <ul class="space-y-2.5">
+              <li v-for="item in footerNav" :key="item.id">
+                <a @click.prevent="scrollToSection(item.id)"
+                   class="group inline-flex items-center gap-2 text-sm text-slate-400 hover:text-sky-300 cursor-pointer transition-colors">
+                  <span class="w-0 group-hover:w-3 h-px bg-sky-400 transition-all duration-300"></span>
+                  <span class="group-hover:translate-x-1 transition-transform">{{ item.label }}</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Hubungi -->
+          <div>
+            <h4 class="text-[11px] font-bold uppercase tracking-widest text-sky-400 mb-4 font-mono">// Hubungi</h4>
+            <ul class="space-y-2.5">
+              <li>
+                <a :href="`https://wa.me/${waNumber}`" target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-emerald-300 transition-colors">
+                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l.6.953-1.05 3.832 3.929-1.034z"/></svg>
+                  WhatsApp
+                </a>
+              </li>
+              <li>
+                <a :href="'mailto:' + email" class="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-sky-300 transition-colors">
+                  <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l9 6 9-6M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                  Email
+                </a>
+              </li>
+              <li>
+                <a :href="linkedin" target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-sky-300 transition-colors">
+                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a :href="github" target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-sky-300 transition-colors">
+                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  GitHub
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Pencapaian -->
+          <div>
+            <h4 class="text-[11px] font-bold uppercase tracking-widest text-sky-400 mb-4 font-mono">// Pencapaian</h4>
+            <div class="grid grid-cols-2 gap-2">
+              <div v-for="s in stats" :key="s.label"
+                   class="text-center p-2.5 rounded-lg bg-slate-950/50 border border-slate-800 hover:border-sky-500/40 transition-colors">
+                <div class="text-lg font-extrabold bg-gradient-to-r from-sky-300 to-indigo-300 bg-clip-text text-transparent leading-none">{{ s.value }}</div>
+                <div class="text-[9px] text-slate-500 uppercase tracking-wider mt-1">{{ s.label }}</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ===== BOTTOM BAR ===== -->
+        <div class="py-6 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+          <div class="text-slate-500 flex items-center gap-2 flex-wrap justify-center sm:justify-start">
+            <span>© {{ new Date().getFullYear() }} {{ name }}.</span>
+            <span class="text-slate-700">·</span>
+            <span class="inline-flex items-center gap-1">
+              Dibuat dengan
+              <svg class="w-3 h-3 text-emerald-400" viewBox="0 0 24 24" fill="currentColor"><path d="M24 1.61H14.06L12 5.16 9.94 1.61H0L12 22.39 24 1.61zM3.42 3.43h5.05L12 8.39l3.53-4.96h5.05L12 18.94 3.42 3.43z"/></svg>
+              Vue.js & Tailwind CSS
+            </span>
+          </div>
+          <button @click="scrollToSection('hero')"
+            class="group inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-slate-700 hover:border-sky-500/60 text-slate-400 hover:text-sky-300 transition-colors">
+            Kembali ke atas
+            <svg class="w-3 h-3 group-hover:-translate-y-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+          </button>
+        </div>
       </div>
     </footer>
 
@@ -893,7 +1350,7 @@ const fallbackImg = (e) => { e.target.src = 'https://placehold.co/800x450/1e293b
               </div>
               <h2 class="text-2xl md:text-3xl font-bold text-white mb-2 leading-tight">{{ selectedProject.title }}</h2>
               <p v-if="selectedProject.client" class="text-sm text-slate-400 mb-1">
-                <span class="text-slate-500">Client:</span> {{ selectedProject.client }}
+                <span class="text-slate-500">Klien:</span> {{ selectedProject.client }}
               </p>
               <p v-if="selectedProject.industry" class="text-xs text-slate-500 italic mb-5">
                 {{ selectedProject.industry }}
@@ -936,7 +1393,7 @@ const fallbackImg = (e) => { e.target.src = 'https://placehold.co/800x450/1e293b
 
 html { scroll-behavior: smooth; }
 
-/* Sembunyikan widget bawaan Google Translate — kita pakai dropdown kustom.
+/* Sembunyikan widget bawaan Google Translate - kita pakai dropdown kustom.
    JANGAN pakai visibility:hidden / display:none di container, karena GT butuh
    element terlihat untuk initialize. Trick: render off-screen tapi tetap "visible". */
 #google_translate_element {
