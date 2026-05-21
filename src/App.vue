@@ -1191,7 +1191,7 @@ const fallbackImg = (e) => { e.target.src = 'https://placehold.co/800x450/1e293b
         </h3>
         <p class="text-slate-400 max-w-xl mx-auto mb-7 text-sm md:text-base leading-relaxed">
           Punya ide proyek AI/ML, aplikasi mobile, atau dashboard data?
-          Saya senang mendiskusikannya bersama — dari ideasi hingga implementasi end-to-end.
+          Saya senang mendiskusikannya bersama - dari ideasi hingga implementasi end-to-end.
         </p>
         <div class="flex flex-wrap justify-center gap-3">
           <a :href="`https://wa.me/${waNumber}`" target="_blank" rel="noopener noreferrer"
