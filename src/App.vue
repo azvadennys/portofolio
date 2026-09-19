@@ -3,7 +3,7 @@ import { ref, onMounted, onUnmounted, computed } from 'vue';
 
 // --- DATA PRIBADI (DARI CV) ---
 const name = "Azvadennys Vasiguhamiaz, S.Kom.";
-const about = "Software Engineer dengan pengalaman end-to-end dalam membangun aplikasi Mobile (Flutter), Desktop (PySide6/Python), dan Web (Laravel, Vue.js). Berpengalaman merancang arsitektur sistem yang skalabel di atas ekosistem Cloud (Firebase, Google Cloud Platform), serta menulis kode yang bersih, modular, dan teruji. Memiliki keahlian khusus dalam mengintegrasikan AI/ML ke dalam produk perangkat lunak - mulai dari custom training TensorFlow hingga integrasi Generative AI (GPT/Gemini API) untuk menghadirkan fitur cerdas yang berdampak nyata.";
+const about = "Saya adalah seorang Software Engineer yang berpengalaman dalam mengembangkan aplikasi Web, Mobile, dan Desktop secara end-to-end, mulai dari perancangan sistem, pengembangan, integrasi API, database, hingga deployment dan maintenance. Saya terbiasa menggunakan berbagai teknologi seperti Node.js, React.js, Laravel, CodeIgniter, Flutter, Python, dan PySide6, serta memiliki pengalaman dalam mengelola infrastruktur dan deployment menggunakan VPS, cPanel, Google Cloud Platform (GCP), dan Firebase. Selain pengembangan perangkat lunak, saya juga memiliki ketertarikan dan pengalaman di bidang Artificial Intelligence dan Machine Learning. Saya mampu mengembangkan dan mengintegrasikan model menggunakan TensorFlow, termasuk image classification, MoveNet, Natural Language Processing (NLP), serta membangun AI chatbot berbasis Retrieval-Augmented Generation (RAG) dan Hybrid RAG. Saya terbiasa menggabungkan kemampuan software engineering dan AI untuk membangun solusi yang tidak hanya stabil dan scalable, tetapi juga memiliki fitur cerdas yang dapat memberikan nilai nyata bagi pengguna dan bisnis.";
 const email = "azvadenis@gmail.com";
 const phone = "+62 821 7583 1680";
 const location = "Kota Bengkulu, Indonesia";
@@ -89,10 +89,10 @@ const experiences = [
     id: 1,
     type: "Kerja",
     role: "Software Engineer",
-    employment: "Kontrak",
+    employment: "Penuh Waktu",
     company: "Perseverance Technology Co., Ltd.",
-    location: "New Taipei, Taiwan (Remote)",
-    period: "Maret 2024 - Sekarang",
+    location: "Bengkulu, Indonesia",
+    period: "Maret 2024 - September 2026",
     summary: "Membangun produk perangkat lunak multi-platform end-to-end, dari perancangan arsitektur hingga implementasi kode, dengan fokus pada integrasi AI/ML untuk menghadirkan fitur cerdas yang berorientasi pada pengguna.",
     highlights: [
       { title: "Cross-Platform Mobile Development", desc: "Mengembangkan aplikasi Flutter (iOS & Android) dengan sinkronisasi real-time melalui Firebase (Firestore, Cloud Functions, Auth, Storage)." },
